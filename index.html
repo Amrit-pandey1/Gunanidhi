@@ -115,8 +115,28 @@
                   <textarea id="message" name="message" class="w-full bg-black-100 bg-opacity-50 rounded border border-black-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-black-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
               </div>
-              <div class="p-2 w-full"> <a href= "http://127.0.0.1:5500/feedback.html"target="_blank">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button></a>
+              <div id="my_form">
+                  <h1 style="text-align: center;">Submit your Feedback</p>
+                  <button  id="nextStep">Submit</button>
+                </div>
+                
+                <div id="thank_you" style="display: none;">
+                  <h1 style="text-align: center;">Thanks for Feedback</p>
+                  <button type="submit">Close</button>
+                </div>
+                
+                <script>
+                  var nextStep = document.querySelector('#nextStep');
+                
+                  nextStep.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Hide first view
+                    document.getElementById('my_form').style.display = 'none';
+                
+                    // Show thank you message element
+                    document.getElementById('thank_you').style.display = 'block';
+                  });
+                </script>
         </div>
     </section>
      <footer class="text-gray-600 body-font">
