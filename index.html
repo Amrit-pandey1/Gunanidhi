@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Python, COding, Python Tutorial, PHP, Java, Lean coding, HOw to learn pyhon, how to learn php,how to learn java">
+    <meta name="keywords" content="Python, Coding, Python Tutorial, PHP, Java, Lean coding, How to learn pyhon, how to learn php,how to learn java">
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>Amrit Official Website</title>
+    <title>Learn Python,Php,Java.etc wih us</title>
     <link rel="stylesheet" href="style.css">
 <style>
-	#nextStep{
-		background-color:blue;
-		border-radius:130px;				
-	}
-	
-	#thankyou{
-		background-color:blue;
-		border-radius:130px;				
-	}
-	  
-	  </style>
+	 #container{
+      border: 1px solid black;
+      margin-left: 200px;
+      padding: 0px;
+      color:black;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 18px;
+        
+</style>
   </head>
   <body background="Amrit.jpg" text="black">
     <header class="text-blue-600 body-font">
@@ -125,29 +124,31 @@
                   <label for="message" class="leading-7 text-sm text-black-600"style="color: black">Message</label>
                   <textarea id="message" name="message" class="w-full bg-black-100 bg-opacity-50 rounded border border-black-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-black-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
-              </div>
-              <div id="myform">
-                  <h1 style="text-align: center;">Submit your Feedback</p>
-                  <button  id="nextStep">Submit</button>
-                </div>
-                
-                <div id="thankyou" style="display: none;">
-                  <h1 style="text-align: center;">Thanks for Feedback</p>
-                  <button type="submit">Close</button>
-                </div>
-                
-                <script>
-                  var nextStep = document.querySelector('#nextStep');
-                
-                  nextStep.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    // Hide first view
-                    document.getElementById('my_form').style.display = 'none';
-                
-                    // Show thank you message element
-                    document.getElementById('thank_you').style.display = 'block';
-                  });
-                </script>
+              </div> <div id="container">
+
+            <div id="my_form">
+              <p>Submit your Feedback.</p>
+              <button id="nextStep">Submit</button>
+            </div>
+
+            <div id="thank_you" style="display: none;">
+              <p>Thanks for filling up the form!</p>
+              <button type="submit">Close</button>
+            </div>
+
+            <script>
+              var nextStep = document.querySelector('#nextStep');
+
+              nextStep.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Hide first view
+                document.getElementById('my_form').style.display = 'none';
+
+                // Show thank you message element
+                document.getElementById('thank_you').style.display = 'block';
+              });
+            </script>
+          </div>
         </div>
     </section>
      <footer class="text-gray-600 body-font">
